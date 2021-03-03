@@ -1,0 +1,73 @@
+
+#fp-nav {position: fixed; z-index: 98; margin-top: 0 !important; top: 50%; opacity: 1; -webkit-webkit-transform: translate3d(0,-50%,0); -moz-transform: translate3d(0,-50%,0); -ms-transform: translate3d(0,-50%,0); -o-transform: translate3d(0,-50%,0); transform: translate3d(0,-50%,0);}
+#fp-nav.right {left: 50px;}
+#fp-nav.left {left: 17px;}
+.fp-slidesNav{position: absolute; z-index: 100;left: 20.208%; opacity: 1; -webkit-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0);margin-left: 0 !important;}
+.fp-slidesNav.bottom {bottom: 70px;}
+.fp-slidesNav.bottom ul li a{width: 6px;height: 6px;margin: 0 10px;background-color: #fff;transition: width .5s, height .5s;-webkit-transition: width .5s, height .5s;border-radius: 50%;-webkit-border-radius: 50%;opacity: 0.3;}
+.fp-slidesNav.bottom ul li:first-child a{margin-left: 0;}
+.fp-slidesNav.bottom ul li:last-child a{margin-right: 0;}
+.fp-slidesNav.bottom ul li a.active{width: 12px;height: 12px;background-color: #fff;opacity: 1;}
+.fp-slidesNav.top {top: 17px;}
+#fp-nav ul, .fp-slidesNav ul {margin: 0; padding: 1px 0;}
+#fp-nav ul li, .fp-slidesNav ul li {display: block; margin: 0; position:relative;}
+#fp-nav ul li:after, .fp-slidesNav ul li:after {content:''; display:block; clear:both;}
+.fp-slidesNav ul li {display: inline-block;vertical-align: middle;}
+#fp-nav ul li a {position: relative;line-height: 51px;border-radius: 50%;-webkit-border-radius: 50%;}
+#fp-nav ul li a, .fp-slidesNav ul li a {display: block; position: relative; float:left; z-index: 1;height: 51px; background: none; cursor: pointer; text-decoration: none; transition: all 0.8s;}
+#fp-nav ul li a.active {width: 51px; height: 51px;border-radius: 50%;-webkit-border-radius: 50%;box-sizing: border-box;-webkit-box-sizing: border-box;}
+#fp-nav.black ul li a.active::after{border: 1px solid #000;}
+#fp-nav ul li a::before{content: '';display: inline-block;position: absolute;left: 20px;top: 20px;width: 9px;height: 9px;background-color: #fff;border-radius: 50%;-webkit-border-radius: 50%;  transition: all 0.8s;}
+#fp-nav ul li a::after{content: '';display: block;position: absolute;left: 0;top: 0;width: 51px;height: 51px;border: 1px solid #fff;border-radius: 50%;-webkit-border-radius: 50%;opacity: 0;}
+#fp-nav ul li a.active::after{opacity: 1;transition: all .5s ease-in;}
+#fp-nav.black ul li a.active::before{background-color: #000;}
+#fp-nav.black ul li a::before{background: rgba(0,0,0,0.2);}
+#fp-nav.white ul li a.active::before{background-color: #fff;}
+#fp-nav.white ul li a::before{background: rgba(255,255,255,0.2);}
+#fp-nav ul li .fp-tooltip {position: absolute; top: 50%; left: 55px; overflow: hidden; display: block; cursor: pointer; width:auto; font-family: 'Poppins', sans-serif ; letter-spacing: 0.075rem; font-weight:600; line-height: 1.125rem; color: font-size: 0; color: transparent; white-space: nowrap; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%);}
+#fp-nav.fp-show-active a + .fp-tooltip{margin-left: 16px;}
+#fp-nav.fp-show-active a.active + .fp-tooltip {font-size: 0.75rem; color: #fff; -webkit-transition: 1s 0.2s; transition: 1s 0.2s; width: auto; opacity: 1; }
+#fp-nav.fp-show-active.black a.active + .fp-tooltip{color: #000;}
+
+.fp-auto-height.fp-section {height: auto !important; padding: 0;/* margin-top: 100px;*/ box-sizing: border-box;}
+
+/*
+.fp-slide {
+    float: left;
+}
+.fp-slide, .fp-slidesContainer {
+    height: 100%;
+    display: block;
+}
+.fp-slides {
+    z-index:1;
+    height: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+*/
+@media only screen and (max-width: 960px) {
+    .fp-slidesNav{left: 0;right: 0;margin: 0 auto !important;}
+    .fp-slidesNav.bottom{bottom: 24px;}
+    .fp-slidesNav ul{text-align: center;}
+    .fp-slidesNav.bottom ul li a.active{width: 8px;height: 8px;}
+    .fp-slidesNav.bottom ul li a{margin: 0 5px;}
+}

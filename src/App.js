@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import { Route, Switch } from "react-router-dom";
 
-function App() {
+import Main from "./pages/Main";
+import Autoq from "./pages/Autoq";
+import Customer from "./pages/Customer";
+import Rules from "./pages/Rules";
+
+
+const App = () => {
+  const [language,setLanguage] = useState('ko');
+  const [catagory,setCatagory] = useState(423);
+  const [apiUrl] = useState('http://api-dev.achakey.net');
+
+  const toggle = e => {
+      setLanguage(e);
+  }
+  const changeCatagory = e => {
+    setCatagory(e);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route path="/" exact component={() => <Main apiUrl={apiUrl} changeCatagory={e => changeCatagory(e)} catagory={catagory} toggle={e => toggle(e)} language={language}/>} />
+        <Route path="/autoq" component={() => <Autoq apiUrl={apiUrl} changeCatagory={e => changeCatagory(e)} catagory={catagory} toggle={e => toggle(e)} language={language}/>} />
+        <Route path="/customer" component={() => <Customer apiUrl={apiUrl} changeCatagory={e => changeCatagory(e)} catagory={catagory} toggle={e => toggle(e)} language={language}/>} />
+        <Route path="/rules" component={() => <Rules apiUrl={apiUrl} changeCatagory={e => changeCatagory(e)} catagory={catagory} toggle={e => toggle(e)} language={language}/>} />
+      </Switch>
+    </>
   );
 }
 
 export default App;
+
+

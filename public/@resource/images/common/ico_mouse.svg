@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="28" viewBox="0 0 16 28">
+    <g id="Mouse_SVG" transform="translate(-111 -876)">
+        <g id="사각형_8" fill="none" stroke="#fff" data-name="사각형 8" transform="translate(111 876)">
+            <rect width="16" height="28" stroke="none" rx="8"/>
+            <rect width="15" height="27" x=".5" y=".5" rx="7.5"/>
+        </g>
+        <rect id="사각형_9" width="4" height="8" fill="#fff" data-name="사각형 9" rx="2" transform="translate(117 883)"/>
+    </g>
+</svg>
